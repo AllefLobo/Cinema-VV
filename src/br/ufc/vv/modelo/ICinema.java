@@ -14,7 +14,7 @@ public interface ICinema {
 	
 	public List<ISala> getSala();
 	
-	public void setSala( List<ISala> salas );
+	public void setSala( ISala salas );
 	
 	public IProgramacao getProgramacao();
 	

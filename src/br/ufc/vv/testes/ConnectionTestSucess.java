@@ -13,7 +13,7 @@ import br.ufc.vv.modelo.Cinema;
 import br.ufc.vv.modelo.IProgramacao;
 import br.ufc.vv.modelo.ISala;
 
-public class ConnectionTest {
+public class ConnectionTestSucess {
 
 	@Before
 	public void setUp() throws Exception {

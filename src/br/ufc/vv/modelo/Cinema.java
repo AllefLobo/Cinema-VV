@@ -46,15 +46,15 @@ public class Cinema implements ICinema {
 	}
 
 	@Override
-	public void setSala( List<ISala> salas ) {
-		// TODO Auto-generated method stub
-		this.salas = salas;
+	public void setSala( ISala sala ) {
+	
+		this.salas.add(sala);
 	}
 
 	@Override
 	public IProgramacao getProgramacao() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.programacao;
 	}
 
 	@Override
