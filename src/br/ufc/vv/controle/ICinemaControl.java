@@ -5,6 +5,7 @@ import java.util.List;
 import br.ufc.vv.modelo.ICinema;
 import br.ufc.vv.modelo.IProgramacao;
 import br.ufc.vv.modelo.ISala;
+import br.ufc.vv.modelo.Sala;
 
 public interface ICinemaControl {
 
@@ -16,13 +17,13 @@ public interface ICinemaControl {
 	
 	public void excluirCinema( );
 	
-	public String buscarProgramacao(  );
+	public void mostrarProgramacao(  );
 	
-	public void adicionarSalas( ISala salas);
+	public void adicionarSalas( int capacidadeMaxima);
 	
 	public void removerSalas( ISala salas );
 	
-	public int buscarSalas(  );
+	public List<Sala> buscarSalas(  );
 		
 	
 }

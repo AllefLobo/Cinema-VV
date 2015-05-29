@@ -8,6 +8,9 @@ import br.ufc.vv.modelo.ICinema;
 import br.ufc.vv.modelo.ICinemaDAO;
 import br.ufc.vv.modelo.IProgramacao;
 import br.ufc.vv.modelo.ISala;
+import br.ufc.vv.modelo.Sala;
+import br.ufc.vv.visao.IProgramacaoGUI;
+import br.ufc.vv.visao.ProgramacaoGUIImpl;
 
 public class CinemaControl implements ICinemaControl {
 
@@ -39,28 +42,28 @@ public class CinemaControl implements ICinemaControl {
 
 	
 	@Override
-	public String buscarProgramacao() {
+	public void mostrarProgramacao() {
 		ICinemaDAO dao = new CinemaDAO();
-		return dao.buscaProgramacao();
+		IProgramacaoGUI gui = new ProgramacaoGUIImpl();
+		gui.init(dao.buscar());
 	}
 
 	@Override
-	public void adicionarSalas(ISala sala) {
-		ICinemaDAO dao = new CinemaDAO();
-		dao.adicionarSala(sala);
-	}
+	public void adicionarSalas(int capacidadeMaxima) {
+		ControladorSala controlador = new ControladorSala();
+		controlador.inserirSala(capacidadeMaxima);
+	} 
 
 	@Override
 	public void removerSalas(ISala sala) {
-		ICinemaDAO dao = new CinemaDAO();
-		
-		dao.removerSala(sala);
+		ControladorSala controlador = new ControladorSala();
+		controlador.apagarSala(sala.getId());
 	}
 
 	@Override
-	public int buscarSalas() {
-		ICinemaDAO dao = new CinemaDAO();
-		return dao.buscaSala();
+	public List<Sala> buscarSalas() {
+		ControladorSala controlador = new ControladorSala();
+		return controlador.listarSala();
 	}
 }
 

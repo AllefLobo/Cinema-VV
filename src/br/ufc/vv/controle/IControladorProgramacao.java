@@ -10,7 +10,7 @@ import br.ufc.vv.modelo.IProgramacao;
 
 
 
-public interface IProgramacaoControl {
+public interface IControladorProgramacao {
 	
 	/**
 	 * Esse m&eacute;todo &eacute; responsavel por retornar uma programacao de uma determinada semana da data 
