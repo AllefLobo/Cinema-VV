@@ -66,45 +66,4 @@ public class ControlTestSucess {
 		
 	}
 	
-	@Test
-	public void testarQueUmaProgramacaoSerAdicionado(){
-				
-		final Mockery context = new Mockery();
-		
-		final IProgramacao prog = context.mock(IProgramacao.class);
-		
-		context.checking(new Expectations() {{
-			atLeast(1).of (prog).retornaEvento();
-            will(returnValue("evento x"));
-        }});
-		
-		
-		ICinemaControl controle = new CinemaControl();
-		
-		controle.adicionarProgramacao(prog);
-		
-		
-		assertEquals( prog.retornaEvento(), controle.buscarProgramacao() );
-		
-	}
-	
-	@Test
-	public void testarQueUmaProgramacaoSerRemovido(){
-				
-		final Mockery context = new Mockery();
-		
-		final IProgramacao prog = context.mock(IProgramacao.class);
-		
-		context.checking(new Expectations() {{
-			atLeast(1).of (prog).retornaEvento();
-            will(returnValue("evento x"));
-        }});
-		
-		
-		ICinemaControl controle = new CinemaControl();
-		
-		controle.removerProgramacao(prog);
-				
-	}
-	
 }

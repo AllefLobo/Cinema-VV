@@ -16,10 +16,6 @@ public interface ICinemaControl {
 	
 	public void excluirCinema( );
 	
-	public void adicionarProgramacao( IProgramacao programacao );
-	
-	public void removerProgramacao( IProgramacao programacao );
-	
 	public String buscarProgramacao(  );
 	
 	public void adicionarSalas( ISala salas);

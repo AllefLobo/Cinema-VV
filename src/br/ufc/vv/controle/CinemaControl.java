@@ -37,20 +37,7 @@ public class CinemaControl implements ICinemaControl {
 		dao.excluir(dao.buscar());
 	}
 
-	@Override
-	public void adicionarProgramacao(IProgramacao programacao) {
-		ICinemaDAO dao = new CinemaDAO();
-		
-		dao.adicionarProgramacao(programacao.retornaEvento());
-	}
-
-	@Override
-	public void removerProgramacao(IProgramacao programacao) {
-		ICinemaDAO dao = new CinemaDAO();
-		
-		dao.removerProgramacao(programacao.retornaEvento());
-	}
-
+	
 	@Override
 	public String buscarProgramacao() {
 		ICinemaDAO dao = new CinemaDAO();
@@ -75,6 +62,6 @@ public class CinemaControl implements ICinemaControl {
 		ICinemaDAO dao = new CinemaDAO();
 		return dao.buscaSala();
 	}
-	}
+}
 
 

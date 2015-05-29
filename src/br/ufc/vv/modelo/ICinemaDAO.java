@@ -10,16 +10,7 @@ public interface ICinemaDAO {
 	
 	public void excluir( ICinema cinema );
 	
-	public void adicionarProgramacao( String evento );
-	
-	public void removerProgramacao( String evento );
 	
 	public String buscaProgramacao( );
-	
-	public void adicionarSala( ISala sala );
-	
-	public void removerSala( ISala sala );
-	
-	public int buscaSala(  );
-	
+
 }

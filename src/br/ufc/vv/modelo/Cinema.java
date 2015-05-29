@@ -5,10 +5,11 @@ import java.util.List;
 public class Cinema implements ICinema {
 
 	private String nome;
+	private int id;
 	private String endereco;
 	private List<ISala> salas;
 	private IProgramacao programacao;
-
+	
 	
 	public Cinema(String nome, String endereco) {
 		this.nome = nome;
@@ -25,6 +26,10 @@ public class Cinema implements ICinema {
 	public void setNome(String novoNome) {
 		// TODO Auto-generated method stub
 		this.nome = novoNome;
+	}
+	
+	public int getId(){
+		return id;
 	}
 
 	@Override

@@ -37,13 +37,13 @@ public class CinemaDAOTestSucess {
 	@Test
 	public void testarQueOCinemaAtualizadoComSucesso(){
 		
-		ICinema antigoCinema = new Cinema("Pinheiro","Rua do alfeneiros");
+		
 		
 		ICinema novoCinema = new Cinema("IGUATEMI","Rua do bagre");
 		
 		ICinemaDAO dao = new CinemaDAO();
 		
-		dao.atualizar(antigoCinema, novoCinema);
+		dao.atualizar( dao.buscar(), novoCinema);
 		
 		assertEquals( novoCinema.getNome(), dao.buscar().getNome());
 			
@@ -52,12 +52,10 @@ public class CinemaDAOTestSucess {
 	@Test
 	public void testarQueOCinemaSerExcluidoComSucesso(){
 		
-		ICinema cinema = new Cinema("IGUATEMI","Rua do bagre");
-		
 		ICinemaDAO dao = new CinemaDAO();
 		
 		
-		dao.excluir(cinema);
+		dao.excluir(dao.buscar());
 		
 		assertEquals( null, dao.buscar());
 			
