@@ -73,7 +73,7 @@ public class ControladorProgramacaoImpl implements IControladorProgramacao{
 	}
 
 	@Override
-	public IProgramacao buscarProgramacaoDaSemana(ICinema cinema, Calendar data)
+	public IProgramacao buscarProgramacaoDaSemana(Calendar data)
 			throws DataInvalidaException {
 		
 		if(this.verificarSeDataEValida(data)){
@@ -98,7 +98,7 @@ public class ControladorProgramacaoImpl implements IControladorProgramacao{
 			fim.set(Calendar.MINUTE, 0);
 			fim.set(Calendar.MILLISECOND, 0);
 			
-			List<IEvento> eventos = this.controladorEvento.buscarEventosPorIntervaloDeTempo(cinema, inicio, fim);
+			List<IEvento> eventos = this.controladorEvento.buscarEventosPorIntervaloDeTempo(inicio, fim);
 			
 			IProgramacao programacao = new ProgramacaoImpl();
 			programacao.setDiaInicial(inicio);
@@ -111,12 +111,12 @@ public class ControladorProgramacaoImpl implements IControladorProgramacao{
 	}
 
 	
-	public List<IProgramacao> buscarProgramacoesPorIntervalo(ICinema cinema, Calendar inicio,
+	public List<IProgramacao> buscarProgramacoesPorIntervalo(Calendar inicio,
 			Calendar fim) throws DataInvalidaException {
 		
 		if(this.verificarSeDataEValida(fim) && this.verificarSeDataEValida(inicio)
 				&& this.verificarSeIntervaloEValido(inicio, fim)){
-			List<IEvento> eventos = this.controladorEvento.buscarEventosPorIntervaloDeTempo(cinema, inicio, fim);
+			List<IEvento> eventos = this.controladorEvento.buscarEventosPorIntervaloDeTempo(inicio, fim);
 			
 			List<IProgramacao> programacoes = this.adicionarEventosAProgramacoes(eventos);
 			return programacoes;
@@ -125,8 +125,8 @@ public class ControladorProgramacaoImpl implements IControladorProgramacao{
 		}
 	}
 	
-	public List<IProgramacao> buscarTodasAsProgramacoes(ICinema cinema) {
-		List<IEvento> eventos = this.controladorEvento.buscarTodosOsEventos(cinema);
+	public List<IProgramacao> buscarTodasAsProgramacoes() {
+		List<IEvento> eventos = this.controladorEvento.buscarTodosOsEventos();
 		List<IProgramacao> programacoes = this.adicionarEventosAProgramacoes(eventos);
 		return programacoes;
 	}

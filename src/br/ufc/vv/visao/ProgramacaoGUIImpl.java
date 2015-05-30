@@ -21,14 +21,12 @@ import br.ufc.vv.controle.ControladorProgramacaoImpl;
 import br.ufc.vv.controle.IControladorEvento;
 import br.ufc.vv.controle.IControladorProgramacao;
 import br.ufc.vv.exception.DataInvalidaException;
-import br.ufc.vv.modelo.ICinema;
 import br.ufc.vv.modelo.IProgramacao;
 
 public class ProgramacaoGUIImpl implements IProgramacaoGUI{
 
 	private JFrame framePrincipal;
 	private IControladorProgramacao controladorProgramacao ;
-	private ICinema cinema;
 
 	 
 	public ProgramacaoGUIImpl(){
@@ -68,8 +66,8 @@ public class ProgramacaoGUIImpl implements IProgramacaoGUI{
 				Calendar dataAtual = Calendar.getInstance();
 				dataAtual.setTimeInMillis(System.currentTimeMillis());
 				try {
-					IProgramacao programacao = controladorProgramacao.buscarProgramacaoDaSemana(cinema, dataAtual);
-					ListarProgramacaoGUI listarProgramacao = new ListarProgramacaoGUI(programacao,cinema);
+					IProgramacao programacao = controladorProgramacao.buscarProgramacaoDaSemana(dataAtual);
+					ListarProgramacaoGUI listarProgramacao = new ListarProgramacaoGUI(programacao);
 				
 				} catch (DataInvalidaException e1) {
 					e1.printStackTrace();
@@ -101,10 +99,10 @@ public class ProgramacaoGUIImpl implements IProgramacaoGUI{
 					calendarDataInicio.setTime(dataFim);
 					
 					
-					List<IProgramacao> programacoes =  controladorProgramacao.buscarProgramacoesPorIntervalo(cinema, calendarDataInicio, calendarDataFim);
+					List<IProgramacao> programacoes =  controladorProgramacao.buscarProgramacoesPorIntervalo(calendarDataInicio, calendarDataFim);
 					if(programacoes.size() != 0){
 						for (IProgramacao programacao : programacoes) {
-							ListarProgramacaoGUI listarProgramacao = new ListarProgramacaoGUI(programacao,cinema);
+							ListarProgramacaoGUI listarProgramacao = new ListarProgramacaoGUI(programacao);
 						}
 					}
 					
@@ -118,8 +116,7 @@ public class ProgramacaoGUIImpl implements IProgramacaoGUI{
 	}
 
 	@Override
-	public void init(ICinema cinema) {
-		this.cinema = cinema;
+	public void init() {
 		initialize();
 	}
 }

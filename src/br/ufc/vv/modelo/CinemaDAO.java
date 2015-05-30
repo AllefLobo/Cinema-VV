@@ -4,9 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 import br.ufc.vv.connection.ConnectionFactory;
 
@@ -49,27 +46,29 @@ public class CinemaDAO implements ICinemaDAO {
 	}
 
 	@Override
-	public ICinema buscar(  ) { 
-Connection connection = factory.getConnection();
+	public ICinema buscar(  ) {
+		ICinema  cinema = null;
+		Connection connection = factory.getConnection();
 		
-		String sql = "select * from cinema ";
+		String sql = "select nome, endereco from cinema";
+		
 		try {
+			
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			
 			
 			ResultSet rs = stmt.executeQuery();
-	
 			
-			if(rs.first() != false){
-					ICinema  cinema = new Cinema( "","");
+			while(rs.next()){
+				
+					cinema = new Cinema( "","");
 					cinema.setNome(rs.getString("nome"));
 					cinema.setEndereco(rs.getString("endereco"));
-					
-					stmt.close();
-					return cinema;
 			}
 			
+			rs.close();
 			
+			stmt.close();
 	
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -83,9 +82,7 @@ Connection connection = factory.getConnection();
 			}
 		}
 		
-		return null;
-		
-		
+		return cinema;
 	}
 	
 	@Override

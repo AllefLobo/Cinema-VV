@@ -29,14 +29,12 @@ public class ListarProgramacaoGUI extends JFrame {
 
 	private JPanel contentPane;
 	private IProgramacao programacao;
-	private ICinema cinema;
 
 	/**
 	 * Create the frame.
 	 */
-	public ListarProgramacaoGUI(IProgramacao programacao, ICinema cinema) {
+	public ListarProgramacaoGUI(IProgramacao programacao) {
 		this.programacao = programacao;
-		this.cinema = cinema;
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -46,7 +44,7 @@ public class ListarProgramacaoGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblCinema = new JLabel();
-		lblCinema.setText(cinema.getNome());
+		//lblCinema.setText(cinema.getNome());
 		lblCinema.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCinema.setFont(new Font("Droid Sans", Font.BOLD, 14));
 		lblCinema.setBounds(12, 12, 424, 21);

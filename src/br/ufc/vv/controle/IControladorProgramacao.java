@@ -20,7 +20,7 @@ public interface IControladorProgramacao {
 	 * @param data uma data contendo a semana que se deseja obter a programacao
 	 * @return retorna a programacao referente a semana da data passada como parametro
 	 */
-	public IProgramacao buscarProgramacaoDaSemana(ICinema cinema, Calendar data) throws DataInvalidaException;
+	public IProgramacao buscarProgramacaoDaSemana(Calendar data) throws DataInvalidaException;
 	
 	
 	/**
@@ -33,12 +33,12 @@ public interface IControladorProgramacao {
 	 * @param fim uma data contendo o mes final do intervalo que se deseja obter as programacoes
 	 * @return retorna uma lista de programacoes referente aos intervalos e ao cinema passados como parametro
 	 */
-	public List<IProgramacao> buscarProgramacoesPorIntervalo(ICinema cinema, Calendar inicio, Calendar fim) throws DataInvalidaException;
+	public List<IProgramacao> buscarProgramacoesPorIntervalo(Calendar inicio, Calendar fim) throws DataInvalidaException;
 	
 	/**
 	 * Esse m&eacute;todo &eacute; responsavel por retonar todas programacoes ja cadastradas no cinema. 
 	 * 
 	 * @return retorna uma lista com todas as programacoes ja cadastradas daquele cinema
 	 */
-	public List<IProgramacao> buscarTodasAsProgramacoes(ICinema cinema);
+	public List<IProgramacao> buscarTodasAsProgramacoes();
 }

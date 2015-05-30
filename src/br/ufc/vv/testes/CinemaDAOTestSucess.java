@@ -27,6 +27,7 @@ public class CinemaDAOTestSucess {
 		ICinemaDAO dao = new CinemaDAO();
 		
 		dao.cadastrar(cinema);
+		
 		ICinema antigoCinema = new Cinema("Pinheiro","Rua do alfeneiros");
 		
 		
@@ -37,15 +38,17 @@ public class CinemaDAOTestSucess {
 	@Test
 	public void testarQueOCinemaAtualizadoComSucesso(){
 		
-		
-		
 		ICinema novoCinema = new Cinema("IGUATEMI","Rua do bagre");
 		
 		ICinemaDAO dao = new CinemaDAO();
 		
 		dao.atualizar( dao.buscar(), novoCinema);
 		
-		assertEquals( novoCinema.getNome(), dao.buscar().getNome());
+		ICinema antigo = dao.buscar();
+		
+		//System.out.println(antigo.getNome());
+		
+		assertEquals( novoCinema.getNome(), antigo.getNome());
 			
 	}
 	

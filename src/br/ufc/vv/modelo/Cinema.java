@@ -1,5 +1,6 @@
 package br.ufc.vv.modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cinema implements ICinema {
@@ -14,6 +15,7 @@ public class Cinema implements ICinema {
 	public Cinema(String nome, String endereco) {
 		this.nome = nome;
 		this.endereco = endereco;
+		salas = new ArrayList<ISala>();
 	}
 
 	@Override

@@ -9,6 +9,6 @@ import br.ufc.vv.modelo.IEvento;
 public interface IControladorEvento {
 
 	
-	public List<IEvento> buscarEventosPorIntervaloDeTempo(ICinema cinema, Calendar inicio, Calendar fim);
-	public List<IEvento> buscarTodosOsEventos(ICinema cinema);
+	public List<IEvento> buscarEventosPorIntervaloDeTempo(Calendar inicio, Calendar fim);
+	public List<IEvento> buscarTodosOsEventos();
 }

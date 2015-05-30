@@ -15,7 +15,7 @@ import br.ufc.vv.modelo.IEvento;
 public class ControladorDeEventosImpl implements IControladorEvento{
 
 	@Override
-	public List<IEvento> buscarEventosPorIntervaloDeTempo(ICinema cinema,
+	public List<IEvento> buscarEventosPorIntervaloDeTempo(
 			Calendar inicio, Calendar fim) {
 		
 		List<IEvento> eventos = new ArrayList<IEvento>();
@@ -28,7 +28,7 @@ public class ControladorDeEventosImpl implements IControladorEvento{
 	}
 
 	@Override
-	public List<IEvento> buscarTodosOsEventos(ICinema cinema) {
+	public List<IEvento> buscarTodosOsEventos() {
 		// TODO Auto-generated method stub
 		List<IEvento> eventos = new ArrayList<IEvento>();
 		

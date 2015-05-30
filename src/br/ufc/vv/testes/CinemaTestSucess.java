@@ -15,6 +15,7 @@ import br.ufc.vv.modelo.ICinema;
 import br.ufc.vv.modelo.ICinemaDAO;
 import br.ufc.vv.modelo.IProgramacao;
 import br.ufc.vv.modelo.ISala;
+import br.ufc.vv.modelo.Sala;
 
 public class CinemaTestSucess {
 
@@ -38,15 +39,11 @@ public class CinemaTestSucess {
 	public void testarSeSetaAsSalasNoCinema() {
 		
 		ICinema cinema = new Cinema("test","12312");
-		
-		final Mockery context = new Mockery();
 
-		final ISala sala1 = context.mock( ISala.class,"Sala1" );
-		final ISala sala2 = context.mock( ISala.class,"Sala2" );
-		final ISala sala3 = context.mock( ISala.class,"Sala3" );
-		final ISala sala4 = context.mock( ISala.class,"Sala4" );
-
-
+		final ISala sala1 = new Sala(5);
+		final ISala sala2 = new Sala(5);
+		final ISala sala3 = new Sala(5);
+		final ISala sala4 = new Sala(5);
 		
 
 		cinema.setSala(sala1);
@@ -55,8 +52,6 @@ public class CinemaTestSucess {
 		cinema.setSala(sala4);
 		
 		
-
-
 		assertEquals(4, cinema.getSala().size());
 
 

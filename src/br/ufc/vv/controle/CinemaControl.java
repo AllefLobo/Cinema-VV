@@ -6,7 +6,6 @@ import br.ufc.vv.modelo.Cinema;
 import br.ufc.vv.modelo.CinemaDAO;
 import br.ufc.vv.modelo.ICinema;
 import br.ufc.vv.modelo.ICinemaDAO;
-import br.ufc.vv.modelo.IProgramacao;
 import br.ufc.vv.modelo.ISala;
 import br.ufc.vv.modelo.Sala;
 import br.ufc.vv.visao.IProgramacaoGUI;
@@ -45,7 +44,7 @@ public class CinemaControl implements ICinemaControl {
 	public void mostrarProgramacao() {
 		ICinemaDAO dao = new CinemaDAO();
 		IProgramacaoGUI gui = new ProgramacaoGUIImpl();
-		gui.init(dao.buscar());
+		gui.init();
 	}
 
 	@Override
