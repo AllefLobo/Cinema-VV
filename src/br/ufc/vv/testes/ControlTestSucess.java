@@ -2,17 +2,12 @@ package br.ufc.vv.testes;
 
 import static org.junit.Assert.assertEquals;
 
-import org.jmock.Expectations;
-import org.jmock.Mockery;
 import org.junit.Test;
 
-import br.ufc.vv.connection.ConnectionFactory;
 import br.ufc.vv.controle.CinemaControl;
 import br.ufc.vv.controle.ICinemaControl;
-import br.ufc.vv.controle.IControladorProgramacao;
 import br.ufc.vv.modelo.Cinema;
 import br.ufc.vv.modelo.ICinema;
-import br.ufc.vv.modelo.IProgramacao;
 
 public class ControlTestSucess {
 

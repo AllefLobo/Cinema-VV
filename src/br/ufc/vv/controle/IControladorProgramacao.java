@@ -5,7 +5,6 @@ import java.util.Calendar;
 import java.util.List;
 
 import br.ufc.vv.exception.DataInvalidaException;
-import br.ufc.vv.modelo.ICinema;
 import br.ufc.vv.modelo.IProgramacao;
 
 

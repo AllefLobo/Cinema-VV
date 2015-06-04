@@ -1,18 +1,11 @@
 package br.ufc.vv.testes;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.jmock.Mockery;
-import org.junit.Before;
 import org.junit.Test;
 
 import br.ufc.vv.modelo.Cinema;
-import br.ufc.vv.modelo.CinemaDAO;
 import br.ufc.vv.modelo.ICinema;
-import br.ufc.vv.modelo.ICinemaDAO;
 import br.ufc.vv.modelo.IProgramacao;
 import br.ufc.vv.modelo.ISala;
 import br.ufc.vv.modelo.Sala;

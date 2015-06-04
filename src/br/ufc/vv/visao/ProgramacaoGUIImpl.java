@@ -46,7 +46,7 @@ public class ProgramacaoGUIImpl implements IProgramacaoGUI{
 		lblNomeCinema.setFont(new Font("Droid Sans", Font.BOLD, 14));
 		lblNomeCinema.setHorizontalAlignment(SwingConstants.CENTER);
 		
-		JLabel lblEscolherPrograma = new JLabel("Escolher Programa√ß√£o");
+		JLabel lblEscolherPrograma = new JLabel("Escolher ProgramaÁ„o");
 		lblEscolherPrograma.setBounds(12, 45, 179, 38);
 		framePrincipal.getContentPane().setLayout(null);
 		framePrincipal.getContentPane().add(lblNomeCinema);
@@ -71,7 +71,7 @@ public class ProgramacaoGUIImpl implements IProgramacaoGUI{
 				
 				} catch (DataInvalidaException e1) {
 					e1.printStackTrace();
-					JOptionPane.showMessageDialog(framePrincipal, "Dat√° Inv√°lida");
+					JOptionPane.showMessageDialog(framePrincipal, "Data Inv·lida");
 				}
 				
 			}
@@ -85,7 +85,7 @@ public class ProgramacaoGUIImpl implements IProgramacaoGUI{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				String dataInicioString = JOptionPane.showInputDialog("Diga a data de in√≠cio da semana : ");
+				String dataInicioString = JOptionPane.showInputDialog("Diga a data de inÌcio da semana : ");
 				String dataFimString = JOptionPane.showInputDialog("Diga a data de fim : ");
 				SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 				try {

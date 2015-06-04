@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import org.jmock.Mockery;
-
 import br.ufc.vv.controle.IControladorEvento;
-import br.ufc.vv.modelo.ICinema;
 import br.ufc.vv.modelo.IEvento;
 
 public class ControladorDeEventosImpl implements IControladorEvento{

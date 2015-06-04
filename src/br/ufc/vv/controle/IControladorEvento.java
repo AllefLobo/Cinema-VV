@@ -2,7 +2,6 @@ package br.ufc.vv.controle;
 import java.util.Calendar;
 import java.util.List;
 
-import br.ufc.vv.modelo.ICinema;
 import br.ufc.vv.modelo.IEvento;
 
 

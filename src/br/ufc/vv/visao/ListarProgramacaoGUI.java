@@ -1,27 +1,23 @@
 package br.ufc.vv.visao;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-import javax.swing.JLabel;
-
 import java.awt.Font;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.Locale;
 
 import javax.swing.DefaultListModel;
-import javax.swing.JOptionPane;
-import javax.swing.SwingConstants;
-import javax.swing.JScrollPane;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
-import br.ufc.vv.modelo.ICinema;
 import br.ufc.vv.modelo.IEvento;
 import br.ufc.vv.modelo.IProgramacao;
 
@@ -50,7 +46,7 @@ public class ListarProgramacaoGUI extends JFrame {
 		lblCinema.setBounds(12, 12, 424, 21);
 		contentPane.add(lblCinema);
 		
-		JLabel lblProgramaoSemana = new JLabel("ProgramaÃ§Ã£o Semana : ");
+		JLabel lblProgramaoSemana = new JLabel("Programação Semana : ");
 		Locale.setDefault(new Locale("pt","br"));
 		int mes = programacao.getDiaInicial().get(Calendar.MONTH)+1;
 		int ano = programacao.getDiaInicial().get(Calendar.YEAR);

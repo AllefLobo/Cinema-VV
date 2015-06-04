@@ -3,7 +3,6 @@ package br.ufc.vv.controle;
 import java.util.List;
 
 import br.ufc.vv.modelo.ICinema;
-import br.ufc.vv.modelo.IProgramacao;
 import br.ufc.vv.modelo.ISala;
 import br.ufc.vv.modelo.Sala;
 

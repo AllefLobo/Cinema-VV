@@ -7,8 +7,6 @@ import java.util.List;
 
 import junit.framework.TestCase;
 
-import org.jmock.Mockery;
-import org.jmock.integration.junit4.JUnit4Mockery;
 import org.junit.Test;
 
 import br.ufc.vv.modelo.Cinema;

@@ -4,9 +4,9 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
+import br.ufc.vv.modelo.Cinema;
 import br.ufc.vv.modelo.Sala;
 import br.ufc.vv.modelo.SalaDAO;
-import br.ufc.vv.view.Cinema;
 
 public class Main {
 
