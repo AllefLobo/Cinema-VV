@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import br.ufc.vv.connection.ConnectionFactory;
 import br.ufc.vv.model.Pessoa;
 import br.ufc.vv.model.connection.FabricaConexao;
 import br.ufc.vv.model.connection.excecoes.ErroNaConexao;
@@ -14,9 +15,10 @@ public class ConexaoTest extends TestCase{
 
 	@Test
 	public void testarConexao() throws ErroNaConexao{
-		FabricaConexao fabrica = new FabricaConexao();
 		
-		assertNotNull(fabrica.getConexao());
+		ConnectionFactory fabrica = new ConnectionFactory();
+		
+		assertNotNull(fabrica.getConnection());
 	}
 	
 }

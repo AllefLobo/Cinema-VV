@@ -54,7 +54,7 @@ public class PessoaDAO implements IPessoaDAO{
 	public boolean alterar(IPessoa pessoa) throws ErroDAO {
 		Connection connection = null;
 		try {
-			connection= fabrica.getConexao();
+			connection= fabrica.getConnection();
 			PreparedStatement query = 
 					connection.prepareStatement("update pessoa set nome=?, salario=?,rg=?,tipo=?,idade=?  where id = ?");
 			
@@ -75,7 +75,7 @@ public class PessoaDAO implements IPessoaDAO{
 	@Override
 	public List<IPessoa> buscarTodasDeUmFilme(IFilme filme) throws ErroDAO {
 		try {
-			Connection con = fabrica.getConexao();
+			Connection con = fabrica.getConnection();
 			PreparedStatement smt = 
 					con.prepareStatement("select p.id,p.nome,p.rg,p.tipo,p.idade, p.salario from pessoa as p, pessoasDeFilme as pf where pf.idFilme = ? and p.id = pf.idPessoa");
 			
@@ -105,7 +105,7 @@ public class PessoaDAO implements IPessoaDAO{
 	@Override
 	public Pessoa buscarPorId(int id) throws ErroDAO {
 		try {
-			Connection con = fabrica.getConexao();
+			Connection con = fabrica.getConnection();
 			PreparedStatement stm = con.prepareStatement("select *from pessoa where id=?");
 			stm.setInt(1, id);
 			ResultSet rs = stm.executeQuery();
@@ -130,7 +130,7 @@ public class PessoaDAO implements IPessoaDAO{
 	@Override
 	public List<IPessoa> buscarPorNome(IPessoa pessoa, IFilme filme) throws ErroDAO {
 		try {
-			Connection con = fabrica.getConexao();
+			Connection con = fabrica.getConnection();
 			PreparedStatement stm = con.prepareStatement("select p.id,p.nome,p.rg,p.tipo,p.idade, p.salario  from pessoa as p, pessoasDeFilme as pf where pf.idFilme=? and p.id = pf.idPessoa and p.nome = ?");
 			stm.setInt(1, filme.getId());
 			stm.setString(2, pessoa.getNome());
@@ -159,7 +159,7 @@ public class PessoaDAO implements IPessoaDAO{
 	@Override
 	public List<IPessoa> buscarTodas() throws ErroDAO {
 		try {
-			Connection con = fabrica.getConexao();
+			Connection con = fabrica.getConnection();
 			PreparedStatement stm = con.prepareStatement("select * from pessoa");
 
 			ResultSet rs = stm.executeQuery();

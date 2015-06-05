@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import br.ufc.vv.connection.ConnectionFactory;
 import br.ufc.vv.model.connection.FabricaConexao;
 import br.ufc.vv.model.connection.excecoes.ErroNaConexao;
 import br.ufc.vv.model.contract.IFilme;
@@ -20,7 +21,7 @@ public class FilmeDAO implements IFilmeDAO{
 	private Connection conexao;
 	
 	public FilmeDAO() throws ErroNaConexao{
-		this.conexao = new FabricaConexao().getConexao();
+		this.conexao = new ConnectionFactory().getConnection();
 	}
 	
 	@Override
