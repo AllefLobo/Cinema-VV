@@ -7,12 +7,14 @@ import java.util.List;
 
 import junit.framework.TestCase;
 
+import org.jmock.Mockery;
+import org.jmock.integration.junit4.JUnit4Mockery;
 import org.junit.Test;
 
-import br.ufc.vv.modelo.Cinema;
-import br.ufc.vv.modelo.ICinema;
-import br.ufc.vv.modelo.IEvento;
-import br.ufc.vv.modelo.ProgramacaoImpl;
+import br.ufc.vv.model.Cinema;
+import br.ufc.vv.model.ICinema;
+import br.ufc.vv.model.IEvento;
+import br.ufc.vv.model.ProgramacaoImpl;
 
 // Ja imprimi
 public class ProgramacaoTeste extends TestCase {

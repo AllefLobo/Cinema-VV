@@ -6,13 +6,16 @@ import java.util.List;
 
 import junit.framework.TestCase;
 
+import org.jmock.Expectations;
+import org.jmock.Mockery;
+import org.jmock.integration.junit4.JUnit4Mockery;
 import org.junit.Test;
 
-import br.ufc.vv.controle.ControladorProgramacaoImpl;
-import br.ufc.vv.controle.IControladorEvento;
+import br.ufc.vv.control.ControladorProgramacaoImpl;
+import br.ufc.vv.control.IControladorEvento;
 import br.ufc.vv.exception.DataInvalidaException;
-import br.ufc.vv.modelo.IEvento;
-import br.ufc.vv.modelo.IProgramacao;
+import br.ufc.vv.model.IEvento;
+import br.ufc.vv.model.IProgramacao;
 
 // Ja imprimi
 public class ControladorProgramacaoTeste extends TestCase{

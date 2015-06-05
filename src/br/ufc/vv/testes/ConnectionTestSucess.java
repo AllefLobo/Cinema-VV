@@ -2,6 +2,7 @@ package br.ufc.vv.testes;
 
 import static org.junit.Assert.assertNotNull;
 
+import org.jmock.Mockery;
 import org.junit.Before;
 import org.junit.Test;
 

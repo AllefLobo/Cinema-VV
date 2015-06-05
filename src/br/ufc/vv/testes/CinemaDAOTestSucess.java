@@ -2,13 +2,14 @@ package br.ufc.vv.testes;
 
 import static org.junit.Assert.assertEquals;
 
+import org.jmock.Mockery;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.ufc.vv.modelo.Cinema;
-import br.ufc.vv.modelo.CinemaDAO;
-import br.ufc.vv.modelo.ICinema;
-import br.ufc.vv.modelo.ICinemaDAO;
+import br.ufc.vv.model.Cinema;
+import br.ufc.vv.model.CinemaDAO;
+import br.ufc.vv.model.ICinema;
+import br.ufc.vv.model.ICinemaDAO;
 
 public class CinemaDAOTestSucess {
 

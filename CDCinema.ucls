@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.8" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
   realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
-  <interface id="1" language="java" name="br.ufc.vv.modelo.ICinema" project="Cinema" 
-    file="/Cinema/src/br/ufc/vv/modelo/ICinema.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="1" language="java" name="br.ufc.vv.model.ICinema" project="Cinema" 
+    file="/Cinema/src/br/ufc/vv/model/ICinema.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="128" y="426"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="2" language="java" name="br.ufc.vv.modelo.ICinemaDAO" project="Cinema" 
-    file="/Cinema/src/br/ufc/vv/modelo/ICinemaDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="2" language="java" name="br.ufc.vv.model.ICinemaDAO" project="Cinema" 
+    file="/Cinema/src/br/ufc/vv/model/ICinemaDAO.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="526" y="429"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="3" language="java" name="br.ufc.vv.controle.ICinemaControl" project="Cinema" 
-    file="/Cinema/src/br/ufc/vv/controle/ICinemaControl.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="3" language="java" name="br.ufc.vv.control.ICinemaControl" project="Cinema" 
+    file="/Cinema/src/br/ufc/vv/control/ICinemaControl.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="370" y="158"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -29,11 +29,11 @@
     </display>  
   </interface>  
   <dependency id="4">    
-    <end type="SOURCE" refId="2"/>    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
   <dependency id="5">    
-    <end type="SOURCE" refId="3"/>    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

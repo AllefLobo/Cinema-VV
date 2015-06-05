@@ -1,6 +1,6 @@
 package br.ufc.vv.testes;
 
-import br.ufc.vv.controle.CinemaControl;
+import br.ufc.vv.control.CinemaControl;
 
 public class DriverParaControladorDeCinema {
 	

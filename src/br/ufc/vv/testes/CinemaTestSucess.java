@@ -2,13 +2,14 @@ package br.ufc.vv.testes;
 
 import static org.junit.Assert.assertEquals;
 
+import org.jmock.Mockery;
 import org.junit.Test;
 
-import br.ufc.vv.modelo.Cinema;
-import br.ufc.vv.modelo.ICinema;
-import br.ufc.vv.modelo.IProgramacao;
-import br.ufc.vv.modelo.ISala;
-import br.ufc.vv.modelo.Sala;
+import br.ufc.vv.model.Cinema;
+import br.ufc.vv.model.ICinema;
+import br.ufc.vv.model.IProgramacao;
+import br.ufc.vv.model.ISala;
+import br.ufc.vv.model.Sala;
 
 public class CinemaTestSucess {
 

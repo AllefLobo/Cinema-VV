@@ -4,10 +4,10 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import br.ufc.vv.controle.CinemaControl;
-import br.ufc.vv.controle.ICinemaControl;
-import br.ufc.vv.modelo.Cinema;
-import br.ufc.vv.modelo.ICinema;
+import br.ufc.vv.control.CinemaControl;
+import br.ufc.vv.control.ICinemaControl;
+import br.ufc.vv.model.Cinema;
+import br.ufc.vv.model.ICinema;
 
 public class ControlTestSucess {
 
