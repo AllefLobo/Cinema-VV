@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import br.ufc.vv.connection.ConnectionFactory;
-import br.ufc.vv.model.connection.FabricaConexao;
+
 import br.ufc.vv.model.connection.excecoes.ErroNaConexao;
 import br.ufc.vv.model.contract.IFilme;
 import br.ufc.vv.model.contract.IFilmeDAO;

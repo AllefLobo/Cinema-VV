@@ -17,7 +17,19 @@ public class CinemaDAOTestSucess {
 	public void setUp() throws Exception {
 		final Mockery context = new Mockery();
 	}
-
+	
+	@Test
+	public void testarQueOCinemaSerExcluidoComSucesso(){
+		
+		ICinemaDAO dao = new CinemaDAO();
+		
+		
+		dao.excluir(dao.buscar());
+		
+		assertEquals( null, dao.buscar());
+			
+	}
+	
 	@Test
 	public void testarQueOCinemaSerCadastradoEBuscadoComSucesso(){
 		
@@ -35,32 +47,21 @@ public class CinemaDAOTestSucess {
 	}
 	
 	@Test
-	public void testarQueOCinemaAtualizadoComSucesso(){
-		
-		ICinema novoCinema = new Cinema("IGUATEMI","Rua do bagre");
+	public void testarQueOCinemaSerAtualizadoComSucesso(){
 		
 		ICinemaDAO dao = new CinemaDAO();
+		ICinema novoCinema = new Cinema("IGUATEMI","Rua do 13");
+		ICinema cinemaAtual = dao.buscar();
+						
+		dao.atualizar( cinemaAtual, novoCinema );
+		cinemaAtual = dao.buscar();
+	
+		//System.out.println(novoCinema.getNome());
+		System.out.println(cinemaAtual.getNome());
 		
-		dao.atualizar( dao.buscar(), novoCinema);
-		
-		ICinema antigo = dao.buscar();
-		
-		//System.out.println(antigo.getNome());
-		
-		assertEquals( novoCinema.getNome(), antigo.getNome());
-			
+		assertEquals( novoCinema.getNome(), cinemaAtual.getNome() );
 	}
 	
-	@Test
-	public void testarQueOCinemaSerExcluidoComSucesso(){
-		
-		ICinemaDAO dao = new CinemaDAO();
-		
-		
-		dao.excluir(dao.buscar());
-		
-		assertEquals( null, dao.buscar());
-			
-	}
+
 
 }

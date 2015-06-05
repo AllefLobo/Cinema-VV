@@ -42,12 +42,12 @@ public class ControladorProgramacaoTeste extends TestCase{
 		eventos.add(evento1);
 		
 		context.checking(new Expectations() {{
-			atLeast(1).of (evento1).getDataInicial();
+			atLeast(1).of (evento1).consultarDataDeInicioDoEvento();
             will(returnValue(evento1Data));
         }});
 		
 		context.checking(new Expectations() {{
-			atLeast(1).of (evento2).getDataInicial();
+			atLeast(1).of (evento2).consultarDataDeInicioDoEvento();
             will(returnValue(evento2Data));
         }});
 		
@@ -110,12 +110,12 @@ public class ControladorProgramacaoTeste extends TestCase{
 		eventos.add(evento1);
 		
 		context.checking(new Expectations() {{
-			atLeast(1).of (evento1).getDataInicial();
+			atLeast(1).of (evento1).consultarDataDeInicioDoEvento();
             will(returnValue(evento1Data));
         }});
 		
 		context.checking(new Expectations() {{
-			atLeast(1).of (evento2).getDataInicial();
+			atLeast(1).of (evento2).consultarDataDeInicioDoEvento();
             will(returnValue(evento2Data));
         }});
 		
